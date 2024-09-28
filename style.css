@@ -9,14 +9,85 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.container {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+
 
 h1 {
     justify-content: center;
     align-items: center;
+    font-family: San Francisco;
+    color: white;
+}
+
+h1 b {
+    font-style: bold;
+    font-size: 1.2em;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+}
+
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+    position: relative;
+}
+
+.box1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.video-holder {
+    width: 40%;
+    height: 45%;
+    background-color: rgb(255, 255, 255);
+    border-style: outset;
+    border-width: 5px;
+    border-color: black;
+}
+
+.bg { 
+    background-image: url("background.webp");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+button {
+    font-family: 'San Francisco';
+    font-size: 1.1em;
+    padding: 10px 20px 10px 20px;
+}
+
+#animText.animate {
+    animation: moveText 1s forwards;
+    position: fixed;
+    z-index: 5;
+}
+
+#animText.animateBack {
+    animation: moveTextBack 1s forwards;
+    position: fixed;
+    z-index: 5;
+}
+
+.second-section {
+    height: 100vh; /* or add content */
+    background-color: lightblue; /* just to test visibility */
 }
